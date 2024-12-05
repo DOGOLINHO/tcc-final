@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Carreto Muito Louco</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/jssocials.css" />
+    <link rel="stylesheet" type="text/css" href="css/jssocials-theme-flat.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+    
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Estilos do modo escuro */
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        /* Estilos do botão Voltar ao Topo */
+        .top-button {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .top-button:hover {
+            background-color: #333;
+        }
+
+        /* Estilos do botão de alternância de tema */
+        .theme-toggle-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .theme-toggle-button:hover {
+            background-color: #333;
+        }
+
+        /* Estilos do modal de erro */
+        #error-popup .modal-content {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 100; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+        <div id="Home" class="container">
+            <div class="logo"></div><!--logo-->
+            
+            <!-- Botão de Hambúrguer -->
+            <div class="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <nav class="desktop-menu">
+                <ul>
+                    <li><a href="#Home">🚚 Home</a></li>
+                    <li><a href="#Servicos">✔️ Serviços</a></li>
+                    <li><a href="#Sobre">❓ Sobre</a></li>
+                    <li><a href="#Agendamento">📅 Agendamento</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=5511965518335&text=Seja%20Bem%20Vindo.">&#x1F4DE Contato</a></li>
+                </ul>
+            </nav>
+    
+            <nav class="mobile-menu">
+                <ul>
+                    <li><a href="#Home">🚚 Home</a></li>
+                    <li><a href="#Servicos">✔️ Serviços</a></li>
+                    <li><a href="#Sobre">❓ Sobre</a></li>
+                    <li><a href="#Agendamento">📅 Agendamento</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=5511965518335&text=Seja%20Bem%20Vindo.">&#x1F4DE Contato</a></li>
+                </ul>
+            </nav>
+    
+            <div class="clear"></div><!--clear-->
+    
+            <div class="chamada1">
+                <h2>SERVIÇO DE FRETE <br> EM SÃO PAULO</h2>
+                <a href="#Agendamento" class="btn btn-large">Agende Agora</a>
+            </div><!--chamada1-->
+        </div><!--container-->
+</header>
+
+<section class="sessao1">
+    <div class="container">
+        <div class="texto-sessao1">
+            <h2>Serviço de frete em São Paulo</h2>
+            <p>Atendimento 24Hrs, Domingos e Feriados!</p>
+            <ul>
+                <li><a href="https://api.whatsapp.com/send?phone=5511965518335&text=Seja%20Bem%20Vindo.">(11) 96551-8335</a> <a href="https://api.whatsapp.com/send?phone=5511965518335&text=Seja%20Bem%20Vindo."><img src="imagens/whatsapp.png" alt=""></a></li>
+                <li><a href="mailto:nicolasandredasilva4@gmail.com">nicolasandredasilva4@gmail.com</a></li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=5511965518335&text=Seja%20Bem%20Vindo." class="btn">Entre em contato</a>
+        </div><!--texto-sessao1-->
+        
+        <div class="device-sessao1">
+            <img src="imagens/device.jpeg" alt="Nova Imagem">
+        </div><!--device-sessao1-->
+        <div class="clear"></div>
+    </div><!--container-->
+</section><!--sessao1-->
+
+<section class="sessao2">
+    <div id="Servicos" class="container">
+        <h2 class="section-title">Quem Somos?</h2>
+        <p>
+            Há 05 anos no mercado, oferecemos serviços eficientes e especializados em retirada de móveis e transporte de utensílios domésticos, como fogão, geladeira, cômodas, estantes, caixas, entre outros.
+            <br><br>
+            Disponibilizamos ajudantes para os carretos e atendemos todas as regiões da Capital, bem como bairros do Litoral e Interior do estado de São Paulo.
+        </p>
+
+        <section class="Galeria">
+            <div>
+                <h2>RESIDENCIAIS</h2>
+                <img src="imagens/Galeria/residencial.png" alt="">
+                <p>Equipe especializada em Mudanças Residenciais na Grande São Paulo. Confira!</p>
+            </div>
+
+            <div>
+                <h2>COMERCIAIS</h2>
+                <img src="imagens/Galeria/comercial.png" alt="">
+                <p>Realizamos Mudanças Comerciais com moderna infraestrutura para a execução dos trabalhos.</p>
+            </div>
+
+            <div>
+                <h2>INDUSTRIAIS</h2>
+                <img src="imagens/Galeria/industrial.png" alt="">
+                <p>Melhor custo-benefício de São Paulo para Mudanças Industriais. Consulte-nos!</p>
+            </div>
+        </section>
+
+        <section class="Galeria-2">
+            <div>
+                <h2>ENTREGAS RÁPIDAS</h2>
+                <img src="imagens/Galeria/capa.png" alt="">
+                <p>Realizamos entregas rápidas com serviço de alta qualidade.</p>
+            </div>
+
+            <div>
+                <h2>TRANSPORTE PARA FEIRAS E EVENTOS</h2>
+                <img src="imagens/Galeria/evento.png" alt="">
+                <p>Transporte especializado para feiras e eventos. Faça um orçamento!</p>
+            </div>
+
+            <div>
+                <h2>TRANSPORTES ESPECIAIS</h2>
+                <img src="imagens/Galeria/especial.png" alt="">
+                <p>Atendemos necessidades especiais de transporte. Fale conosco!</p>
+            </div>
+        </section>
+
+        <h1 class="Final">Atendimento 24Hrs, Domingos e Feriados!</h1>
+
+        <section class="Final">
+            <div class="carregado">
+                <img src="imagens/Galeria/carregado-m.jpg" alt="">
+            </div>
+
+            <div id="Sobre" class="tex">
+                <h2>Nossa equipe é altamente experiente!</h2>
+                <p>Nossos profissionais trabalham com todo o cuidado e responsabilidade no transporte de suas mercadorias.</p>
+                <a href="#Agendamento" class="btn">Saiba Mais</a>
+            </div>
+        </section>
+    </div><!--container-->
+</section><!--sessao2-->
+
+<section id="Agendamento" class="sessao3">
+    <div class="container">
+        <h2 class="section-title">Agendamento</h2>
+        <form action="https://formspree.io/f/myzgpevv" method="POST" id="agendamento-form">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu E-mail" required>
+            <input type="text" name="telefone" placeholder="Seu Telefone" required>
+            <select name="servico" required>
+                <option value="" disabled selected>Selecione o Tipo de Serviço</option>
+                <option value="residencial">Mudança Residencial</option>
+                <option value="comercial">Mudança Comercial</option>
+                <option value="industrial">Mudança Industrial</option>
+                <option value="entregas_rapidas">Entregas Rápidas</option>
+                <option value="feiras_eventos">Feiras e Eventos</option>
+                <option value="transportes_especiais">Transportes Especiais</option>
+            </select>
+            <input type="date" name="data" required>
+            <input type="time" name="hora" required>
+            <textarea name="mensagem" placeholder="Deixe detalhes do seu carreto (opcional)"></textarea>
+            <input type="submit" value="Agendar">
+        </form>
+    </div><!--container-->
+</section><!--sessao3-->
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Carreto Muito Louco. Todos os direitos reservados.</p>
+    </div><!--container-->
+</footer>
+
+<!-- Popup Modal -->
+<div id="popup" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Obrigado pelo seu agendamento!</h2>
+        <p>Entraremos em contato com você em breve.</p>
+    </div>
+</div>
+
+<!-- Popup Modal de Erro -->
+<div id="error-popup" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Erro de Agendamento</h2>
+        <p>Este horário já foi agendado. Por favor, escolha outro horário.</p>
+    </div>
+</div>
+
+<!-- Botão para Voltar ao Topo -->
+<button onclick="scrollToTop()" class="top-button">⬆️</button>
+
+<!-- Botão para Alternar Tema -->
+<button onclick="toggleTheme()" class="theme-toggle-button">🌙</button>
+
+<script>
+    // Obter o modal
+    var modal = document.getElementById("popup");
+    var errorModal = document.getElementById("error-popup");
+
+    // Obter o botão que abre o modal
+    var btn = document.querySelector("input[type='submit']");
+
+    // Obter o <span> que fecha o modal
+    var span = document.getElementsByClassName("close");
+
+    // Quando o usuário clica no botão, abre o modal 
+    btn.onclick = function(event) {
+        event.preventDefault(); // Previne o envio do formulário imediatamente
+
+        var dataInput = document.querySelector("input[name='data']").value;
+        var horaInput = document.querySelector("input[name='hora']").value;
+
+        var selectedDate = new Date(dataInput + "T" + horaInput);
+        var currentDate = new Date();
+
+        if (selectedDate < currentDate) {
+            errorModal.style.display = "block";
+        } else {
+            modal.style.display = "block";
+            document.getElementById("agendamento-form").submit();
+        }
+    }
+
+    // Quando o usuário clica no <span> (x), fecha o modal
+    span[0].onclick = function() {
+        modal.style.display = "none";
+    }
+
+    span[1].onclick = function() {
+        errorModal.style.display = "none";
+    }
+
+    // Quando o usuário clica fora do modal, fecha-o
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        } else if (event.target == errorModal) {
+            errorModal.style.display = "none";
+        }
+    }
+
+    // Mostrar o botão ao rolar a página
+    window.onscroll = function() {
+        var button = document.querySelector('.top-button');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+
+    // Função para rolar a página até o topo
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Alternar entre modo claro e escuro
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        var themeButton = document.querySelector('.theme-toggle-button');
+        themeButton.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    }
+</script>
+<script>
+    document.querySelector('.hamburger-btn').addEventListener('click', function() {
+        var menu = document.querySelector('.mobile-menu');
+        menu.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
